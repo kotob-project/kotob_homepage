@@ -1,11 +1,12 @@
 // src/App.tsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useMemo } from 'react';
 import { Header } from './components/header';
 import { routes } from './routes';
 
 
 function App() {
-  const filterdRoutes = routes.filter((route) => route.isActive === true);
+  const filterdRoutes = useMemo(() => routes.filter((route) => route.isActive === true), [routes]);
   return (
     <Router>
       <div style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'ui-monospace', overflowY: 'hidden'}}>
