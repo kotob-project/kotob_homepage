@@ -57,13 +57,13 @@ export const Contributors = () => {
         <p style={{ color: '#888', marginBottom: '2.5rem' }}>List of those who contributed to development and those who helped.</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', margin: '6px'}}>
             {members.map((member) => (
-            <div key={member.id}>
-                <ContributorButton
-                    avatarURL={member.avatar_url}
-                    name={member.login}
-                    onClick={() => window.open(member.html_url, '_blank')}
-                />
-            </div>
+                <div key={member.id}>
+                    <ContributorButton
+                        avatarURL={member.avatar_url}
+                        name={member.login}
+                        onClick={() => window.open(member.html_url, '_blank')}
+                    />
+                </div>
             ))}
             </div>
         </div>

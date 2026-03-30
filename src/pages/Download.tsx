@@ -1,13 +1,12 @@
 // src/pages/Download.tsx
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { InstallCommand } from '../components/InstallCommand';
 
 type InstallationMethod = 'Go (Recommended)' | 'Python' | 'Other (Binary)';
 
 export const Download = () => {
   const [selected, setSelected] = useState<InstallationMethod>('Go (Recommended)');
-
-  const methods: InstallationMethod[] = ['Go (Recommended)', 'Python', 'Other (Binary)'];
+  const methods: InstallationMethod[] = useMemo<InstallationMethod[]>(() => ['Go (Recommended)', 'Python', 'Other (Binary)'], []);
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '4rem 2rem' }}>
