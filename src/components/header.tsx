@@ -12,8 +12,8 @@ export const Header = () => {
       borderBottom: '1px solid #333',
       backgroundColor: '#000'
     }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <Link to="/">
+      <div>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'white', textDecoration: 'none' }}>
           <img width={60} src={Logo} alt="Logo" />
           <span style={{ fontSize: '1.5rem', fontWeight: 'bold', letterSpacing: '0.1rem' }}>
             kotob
