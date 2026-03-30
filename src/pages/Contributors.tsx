@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 
 const endpoint: string  = "https://api.github.com/repos/kotob-project/members"
-const projects: string[] = [
-    "kotob",
-    "kotob_server",
-];
 type GitHubMember = {
   login: string;
   id: number;
