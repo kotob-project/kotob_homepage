@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ContributorButton from "../components/ContributorButton";
 
 const endpoint: string = "https://api.github.com/orgs/kotob-project/members"
 type GitHubMember = {
@@ -51,10 +52,20 @@ export const Contributors = () => {
     }, []);
 
     return (
-        <div>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '4rem 2rem' }}>
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>Contributors</h2>
+        <p style={{ color: '#888', marginBottom: '2.5rem' }}>List of those who contributed to development and those who helped.</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', margin: '6px'}}>
             {members.map((member) => (
-                <div>{/* ここに良さげなデザインを頼んだ by tanahiro to kyonshi */}</div>
+            <div key={member.id}>
+                <ContributorButton
+                    avatarURL={member.avatar_url}
+                    name={member.login}
+                    onClick={() => window.open(member.html_url, '_blank')}
+                />
+            </div>
             ))}
+            </div>
         </div>
     );
 }
