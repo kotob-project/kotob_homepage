@@ -44,7 +44,7 @@ export const Contributors = () => {
                 console.error(e);
                 alert("Failed to analyse api response data");
             }
-            
+
         });
 
         fetchContributors();
