@@ -6,7 +6,7 @@ import { routes } from './routes';
 
 
 function App() {
-  const filterdRoutes = useMemo(() => routes.filter((route) => route.isActive), [routes]);
+  const filterdRoutes = useMemo(() => routes.filter((route) => route.isActive !== false), [routes]);
   return (
     <Router>
       <div style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'ui-monospace', overflowY: 'hidden'}}>
