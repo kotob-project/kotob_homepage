@@ -3,7 +3,7 @@ import '../App.css';
 
 export const Home = () => {
   return (
-    <div style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'ui-monospace' }}>
+    <div style={{ backgroundColor: '#000', color: '#fff', fontFamily: 'ui-monospace' }}>
 
       <main style={{
         display: 'flex',
