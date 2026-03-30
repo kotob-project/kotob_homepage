@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import { Home } from '../pages/Home'; // TOPページの中身をここに移したと想定
 import { Download } from '../pages/Download';
 import { Contributors } from '../pages/Contributors';
