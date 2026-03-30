@@ -13,10 +13,12 @@ export const Header = () => {
       backgroundColor: '#000'
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <img width={60} src={Logo} alt="Logo" />
-        <span style={{ fontSize: '1.5rem', fontWeight: 'bold', letterSpacing: '0.1rem' }}>
-          kotob
-        </span>
+        <Link to="/">
+          <img width={60} src={Logo} alt="Logo" />
+          <span style={{ fontSize: '1.5rem', fontWeight: 'bold', letterSpacing: '0.1rem' }}>
+            kotob
+          </span>
+        </Link>
       </div>
       <nav style={{ display: 'flex', gap: '20px' }}>
         <Link to="/" style={{ color: '#ccc', textDecoration: 'none' }}>TOP</Link>
