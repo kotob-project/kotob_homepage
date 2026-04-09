@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc && vite build && npm run postbuild",
+    "postbuild": "mkdir -p dist/download dist/contributors && cp dist/index.html dist/download/index.html && cp dist/index.html dist/contributors/index.html && cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },
